@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreApiEgitim2", "NetCoreApiEgitim2\NetCoreApiEgitim2.csproj", "{577119B3-68C5-494C-81DA-06F9F69DE0CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{577119B3-68C5-494C-81DA-06F9F69DE0CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577119B3-68C5-494C-81DA-06F9F69DE0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577119B3-68C5-494C-81DA-06F9F69DE0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577119B3-68C5-494C-81DA-06F9F69DE0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C2F9F68-8CF5-4184-BDD3-AB3341EE437A}
+	EndGlobalSection
+EndGlobal
