@@ -16,7 +16,7 @@ namespace NetCoreApiEgitim2.Controllers
         [Route("getKategoriler")]
         public IActionResult getKategoriler()
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             using var context= new Context();
             var values = context.Kategoriler.ToList();
             return Ok(values);
@@ -65,6 +65,21 @@ namespace NetCoreApiEgitim2.Controllers
             using var context= new Context();
             string query = @"select Kategoriler.ad,kategoriId,Urunler.ad,Urunler.id as urunId from Urunler
 left join Kategoriler on Kategoriler.id=Urunler.kategoriId";
+
+            var data = getQueryToDataTable(query, context);
+
+            string json = JsonConvert.SerializeObject(data);
+
+            return Ok(json);
+        }
+
+        [HttpPost]
+        [Route("getUruns")]
+        public IActionResult getUruns()
+        {
+            Thread.Sleep(2000);
+            using var context = new Context2();
+            string query = @"select top 100 Urun_AdiTr,Urun_Resim from Servis_Urun where Urun_Resim is not null";
 
             var data = getQueryToDataTable(query, context);
 

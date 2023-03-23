@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -13,12 +14,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<Context>();// veri tabný baðlantý yeri
 var app = builder.Build();
 
-
+//app.UseCors(builder => builder
+//.AllowAnyHeader()
+//.AllowAnyMethod()
+//.SetIsOriginAllowed((host) => true)
+//.AllowCredentials()
+//);
 app.UseCors(builder => builder
 .AllowAnyHeader()
 .AllowAnyMethod()
-.SetIsOriginAllowed((host) => true)
-.AllowCredentials()
+.AllowAnyOrigin()
+.AllowCredentials() // silinebilir
 );
 
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
