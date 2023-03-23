@@ -24,7 +24,6 @@ app.UseCors(builder => builder
 .AllowAnyHeader()
 .AllowAnyMethod()
 .AllowAnyOrigin()
-.AllowCredentials() // silinebilir
 );
 
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
